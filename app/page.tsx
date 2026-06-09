@@ -154,11 +154,24 @@ export default function Home() {
                 Get started
                 <ArrowRight className="h-4 w-4" />
               </Link>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-6 py-3 font-medium text-cyan-100 transition hover:bg-cyan-300/20"
+              >
+                Browse pricing
+                <ArrowRight className="h-4 w-4" />
+              </Link>
               <a
                 href="#stack"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-medium text-slate-100 transition hover:bg-white/10"
               >
                 See the stack
+              </a>
+              <a
+                href="#partners"
+                className="inline-flex items-center gap-2 rounded-full border border-fuchsia-300/30 bg-fuchsia-300/10 px-6 py-3 font-medium text-fuchsia-100 transition hover:bg-fuchsia-300/20"
+              >
+                Meet partners
               </a>
             </div>
 
@@ -226,12 +239,12 @@ export default function Home() {
 
         <section
           id="features"
-          className="grid gap-6 border-t border-white/10 py-16 md:grid-cols-3"
+          className="mt-10 grid gap-6 rounded-[2.5rem] border border-fuchsia-300/20 bg-gradient-to-br from-fuchsia-500/15 via-violet-500/10 to-indigo-500/15 px-6 py-16 md:grid-cols-3 lg:px-10"
         >
           {highlights.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+              className="rounded-3xl border border-white/10 bg-slate-950/55 p-6 shadow-2xl shadow-black/20 backdrop-blur"
             >
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500/15 text-violet-200">
                 <Icon className="h-5 w-5" />
@@ -240,9 +253,22 @@ export default function Home() {
               <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
             </article>
           ))}
+
+          <div className="md:col-span-3">
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-slate-950 transition hover:bg-violet-100"
+            >
+              Explore plans from this section
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </section>
 
-        <section className="border-t border-white/10 py-16">
+        <section
+          id="partners"
+          className="mt-10 rounded-[2.5rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-400/15 via-slate-950/50 to-emerald-400/15 px-6 py-16 lg:px-10"
+        >
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-violet-200">
               Partners
@@ -254,6 +280,13 @@ export default function Home() {
               A smooth horizontal reel of partner logos to make the page feel
               more established and a little more alive.
             </p>
+            <Link
+              href="/register"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 font-medium text-slate-100 transition hover:bg-white/10"
+            >
+              Start with a mock account
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="partners-marquee mt-8">
@@ -279,7 +312,7 @@ export default function Home() {
 
         <section
           id="stack"
-          className="grid gap-6 border-t border-white/10 py-16 lg:grid-cols-[0.7fr_1.3fr]"
+          className="mt-10 grid gap-6 rounded-[2.5rem] border border-amber-300/20 bg-gradient-to-br from-amber-400/15 via-slate-950/50 to-orange-500/15 px-6 py-16 lg:grid-cols-[0.7fr_1.3fr] lg:px-10"
         >
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-violet-200">
@@ -290,13 +323,20 @@ export default function Home() {
               The repo starts with the core framework and styling setup needed
               to build the rest of the parody site cleanly.
             </p>
+            <Link
+              href="/register"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber-300 px-5 py-3 font-medium text-slate-950 transition hover:bg-amber-200"
+            >
+              Use this foundation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {stack.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-slate-100"
+                className="rounded-2xl border border-white/10 bg-slate-950/55 px-5 py-4 text-slate-100 shadow-lg shadow-black/10"
               >
                 {item}
               </div>
@@ -306,7 +346,7 @@ export default function Home() {
 
         <section
           id="pricing"
-          className="border-t border-white/10 py-16"
+          className="mt-10 rounded-[2.5rem] border border-violet-300/20 bg-gradient-to-br from-violet-500/20 via-slate-950/60 to-indigo-500/20 px-6 py-16 lg:px-10"
         >
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-violet-200">
@@ -379,7 +419,7 @@ export default function Home() {
 
         <section
           id="social"
-          className="grid gap-6 border-t border-white/10 py-16 lg:grid-cols-[0.8fr_1.2fr]"
+          className="mt-10 grid gap-6 rounded-[2.5rem] border border-rose-300/20 bg-gradient-to-br from-rose-500/15 via-slate-950/55 to-fuchsia-500/15 px-6 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:px-10"
         >
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.3em] text-violet-200">
@@ -397,19 +437,26 @@ export default function Home() {
               {trustBadges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
+                  className="rounded-full border border-white/10 bg-slate-950/55 px-4 py-2 text-sm text-slate-200"
                 >
                   {badge}
                 </span>
               ))}
             </div>
+            <Link
+              href="/pricing"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-medium text-slate-950 transition hover:bg-violet-100"
+            >
+              See pricing again
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="grid gap-4">
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.name}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur"
+                className="rounded-[2rem] border border-white/10 bg-slate-950/55 p-6 backdrop-blur"
               >
                 <MessageSquareQuote className="h-5 w-5 text-violet-200" />
                 <blockquote className="mt-4 text-lg leading-8 text-slate-100">
@@ -425,7 +472,7 @@ export default function Home() {
 
         <section
           id="deploy"
-          className="border-t border-white/10 py-16"
+          className="mt-10 rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-slate-950 via-slate-900 to-violet-950 px-6 py-16 lg:px-10"
         >
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
