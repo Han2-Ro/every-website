@@ -136,9 +136,12 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <button className="mt-8 w-full rounded-full bg-white px-4 py-3 font-medium text-slate-950 transition hover:bg-violet-100">
+                <Link
+                  href={`/register?plan=${encodeURIComponent(plan.name)}`}
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-white px-4 py-3 font-medium text-slate-950 transition hover:bg-violet-100"
+                >
                   Choose {plan.name}
-                </button>
+                </Link>
               </article>
             ))}
           </div>

@@ -148,10 +148,10 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/pricing"
+                href="/register"
                 className="inline-flex items-center gap-2 rounded-full bg-violet-500 px-6 py-3 font-medium text-white shadow-glow transition hover:bg-violet-400"
               >
-                View pricing page
+                Get started
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
