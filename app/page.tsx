@@ -97,9 +97,9 @@ export default function Home() {
             <a href="#stack" className="transition hover:text-white">
               Stack
             </a>
-            <a href="#pricing" className="transition hover:text-white">
+            <Link href="/pricing" className="transition hover:text-white">
               Pricing
-            </a>
+            </Link>
             <a href="#social" className="transition hover:text-white">
               Social proof
             </a>
@@ -126,10 +126,10 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="#features"
+                href="/pricing"
                 className="inline-flex items-center gap-2 rounded-full bg-violet-500 px-6 py-3 font-medium text-white shadow-glow transition hover:bg-violet-400"
               >
-                Explore the vibe
+                View pricing page
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
@@ -262,6 +262,13 @@ export default function Home() {
               The pricing section keeps the parody honest: multiple plans,
               escalating promises, and one obvious best choice.
             </p>
+            <Link
+              href="/pricing"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 font-medium text-slate-100 transition hover:bg-white/10"
+            >
+              Open the pricing page
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
