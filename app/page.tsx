@@ -381,7 +381,8 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 text-slate-300">
                   This banner exists purely because modern product sites feel
-                  incomplete without one.
+                  incomplete without one. There is also a real corner popup
+                  now, just to keep things extra convincing.
                 </p>
               </div>
 
