@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Bot,
   Cloud,
-  LayoutDashboard,
   MessageSquareQuote,
   ShieldCheck,
   Sparkles,
@@ -19,6 +18,7 @@ import {
   siVercel,
 } from "simple-icons";
 import { BrandLogo } from "./components/brand-logo";
+import { SiteLogo } from "./components/site-logo";
 
 const highlights = [
   {
@@ -108,9 +108,9 @@ export default function Home() {
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.25),transparent_35%),linear-gradient(180deg,#020617_0%,#0f172a_55%,#020617_100%)] text-slate-50">
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-6 lg:px-8">
         <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
-          <div className="flex items-center gap-2 font-semibold tracking-wide">
-            <LayoutDashboard className="h-5 w-5 text-violet-300" />
-            every-website
+          <div className="flex items-center gap-3 font-semibold tracking-wide">
+            <SiteLogo className="h-12 w-12 shrink-0" />
+            <span>every-website</span>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#features" className="transition hover:text-white">
@@ -119,6 +119,9 @@ export default function Home() {
             <a href="#stack" className="transition hover:text-white">
               Stack
             </a>
+            <Link href="/blog" className="transition hover:text-white">
+              Blog
+            </Link>
             <Link href="/pricing" className="transition hover:text-white">
               Pricing
             </Link>
@@ -130,19 +133,24 @@ export default function Home() {
 
         <section className="grid flex-1 items-center gap-16 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
           <div className="space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-400/10 px-4 py-2 text-sm text-violet-200">
-              <Sparkles className="h-4 w-4" />
-              AI SaaS, but make it more AI
-            </span>
+            <div className="flex items-center gap-4">
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-3 shadow-2xl shadow-violet-950/20 backdrop-blur">
+                <SiteLogo className="h-20 w-20" />
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/30 bg-violet-400/10 px-4 py-2 text-sm text-violet-200">
+                <Sparkles className="h-4 w-4" />
+                Built for teams that want to move fast
+              </span>
+            </div>
 
             <div className="space-y-5">
               <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-                The most convincing generic startup on the internet.
+                Ship a polished product experience from day one.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-300">
-                A polished foundation for a parody product site: shiny enough
-                to feel real, simple enough to build on quickly, and ready for
-                all the usual AI-era marketing tropes.
+                A premium foundation for modern product teams: clear positioning,
+                confident visuals, and the kind of experience that makes the
+                whole product feel ready before the backend catches up.
               </p>
             </div>
 

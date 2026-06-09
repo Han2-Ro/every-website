@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { ArrowLeft, CheckCircle2, Sparkles } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
+import { SiteLogo } from "../components/site-logo";
 
 export default function RegisterPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -20,9 +21,9 @@ export default function RegisterPage() {
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.25),transparent_35%),linear-gradient(180deg,#020617_0%,#0f172a_55%,#020617_100%)] text-slate-50">
       <div className="mx-auto max-w-3xl px-6 py-6 lg:px-8">
         <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
-          <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-wide">
-            <ArrowLeft className="h-5 w-5 text-violet-300" />
-            Back home
+          <Link href="/" className="inline-flex items-center gap-3 font-semibold tracking-wide">
+            <SiteLogo className="h-8 w-8 shrink-0" />
+            <span>Back home</span>
           </Link>
           <div className="inline-flex items-center gap-2 text-sm text-violet-200">
             <Sparkles className="h-4 w-4" />
