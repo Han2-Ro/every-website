@@ -98,14 +98,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 9rem;
+  width: 4.25rem;
+  height: 4.25rem;
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(15, 23, 42, 0.9);
-  padding: 0.9rem 1.4rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
   color: rgb(226, 232, 240);
   box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.08) inset;
 }

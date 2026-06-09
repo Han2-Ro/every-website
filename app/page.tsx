@@ -8,6 +8,17 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import {
+  siAirtable,
+  siFigma,
+  siLinear,
+  siNotion,
+  siOpencollective,
+  siOpenrouter,
+  siStripe,
+  siVercel,
+} from "simple-icons";
+import { BrandLogo } from "./components/brand-logo";
 
 const highlights = [
   {
@@ -82,14 +93,14 @@ const trustBadges = [
 ];
 
 const partnerBrands = [
-  "Vercel",
-  "Stripe",
-  "Linear",
-  "Notion",
-  "Slack",
-  "OpenAI",
-  "Airtable",
-  "Figma",
+  { name: "Vercel", icon: siVercel },
+  { name: "Stripe", icon: siStripe },
+  { name: "Linear", icon: siLinear },
+  { name: "Notion", icon: siNotion },
+  { name: "OpenRouter", icon: siOpenrouter },
+  { name: "Open Collective", icon: siOpencollective },
+  { name: "Airtable", icon: siAirtable },
+  { name: "Figma", icon: siFigma },
 ];
 
 export default function Home() {
@@ -249,10 +260,17 @@ export default function Home() {
             <div className="partners-marquee__track">
               {[...partnerBrands, ...partnerBrands].map((brand, index) => (
                 <div
-                  key={`${brand}-${index}`}
+                  key={`${brand.name}-${index}`}
                   className="partners-marquee__item"
                 >
-                  <span className="partners-marquee__logo">{brand}</span>
+                  <div
+                    className="partners-marquee__logo"
+                    aria-label={brand.name}
+                    title={brand.name}
+                  >
+                    <BrandLogo icon={brand.icon} />
+                    <span className="sr-only">{brand.name}</span>
+                  </div>
                 </div>
               ))}
             </div>
