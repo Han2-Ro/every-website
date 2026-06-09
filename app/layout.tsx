@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { AiChatbot } from "./components/ai-chatbot";
 import { CookieBanner } from "./components/cookie-banner";
 import "./globals.css";
 
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <AiChatbot />
         <CookieBanner />
       </body>
     </html>
