@@ -81,6 +81,17 @@ const trustBadges = [
   "95% vibes score",
 ];
 
+const partnerBrands = [
+  "Vercel",
+  "Stripe",
+  "Linear",
+  "Notion",
+  "Slack",
+  "OpenAI",
+  "Airtable",
+  "Figma",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.25),transparent_35%),linear-gradient(180deg,#020617_0%,#0f172a_55%,#020617_100%)] text-slate-50">
@@ -218,6 +229,34 @@ export default function Home() {
               <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
             </article>
           ))}
+        </section>
+
+        <section className="border-t border-white/10 py-16">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-violet-200">
+              Partners
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold">
+              Trusted by the brands everyone recognizes
+            </h2>
+            <p className="mt-4 text-slate-300">
+              A smooth horizontal reel of partner logos to make the page feel
+              more established and a little more alive.
+            </p>
+          </div>
+
+          <div className="partners-marquee mt-8">
+            <div className="partners-marquee__track">
+              {[...partnerBrands, ...partnerBrands].map((brand, index) => (
+                <div
+                  key={`${brand}-${index}`}
+                  className="partners-marquee__item"
+                >
+                  <span className="partners-marquee__logo">{brand}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section
